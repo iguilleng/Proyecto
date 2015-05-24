@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MasterPages Demo</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 23px;
+        }
+        .nuevoEstilo1 {
+            vertical-align: top;
+            background-color: #D6D6D6;
+            width: 200px;
+            height: 300px;
+        }
+        .nuevoEstilo2 {
+            background-color: #999999;
+            height: 48px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        .nuevoEstilo3 {
+            text-align: center;
+        }
+        .auto-style5 {
+            text-align: center;
+            width: 38px;
+            height: 106px;
+        }
+        .auto-style6 {
+            vertical-align: top;
+            background-color: #D6D6D6;
+            width: 38px;
+            height: 300px;
+        }
+        .auto-style7 {
+            height: 106px;
+        }
+        .nuevoEstilo4 {
+            text-align: center;
+        }
+        .auto-style8 {
+            width: 271px;
+            height: 223px;
+        }
+        .nuevoEstilo5 {
+            text-align: center;
+        }
+        .auto-style9 {
+            width: 1755px;
+            height: 172px;
+        }
+        .auto-style10 {
+            width: 1740px;
+            height: 356px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="nuevoEstilo2" colspan="2">
+                    <h2>
+                        <img alt="" class="auto-style10" src="Images/logo.GIF" /></h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <img alt="" class="auto-style8" src="Images/home.gif" /></td>
+                <td class="auto-style7">
+                    <h2 class="nuevoEstilo5" style="font-size: xx-large">
+                        <br />
+                        Sistema de Matricula<br />
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">Menu<br />
+                    <br />
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </td>
+                <td class="auto-style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img alt="" class="auto-style9" src="Images/Captura.GIF" /></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
